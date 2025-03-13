@@ -85,7 +85,7 @@ public class SchoolDaoImpl implements SchoolDao {
                      "FROM course " +
                      "INNER JOIN course_student ON course.cid = course_student.course_id " +
                      "INNER JOIN student ON student.sid = course_student.student_id "+
-                     "GROUP BY courseCode";
+                     "GROUP BY courseCode ";
 
         // YOUR CODE ENDS HERE
         return jdbcTemplate.query(sql, new StudentCountMapper());
